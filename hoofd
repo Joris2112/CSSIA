@@ -1,0 +1,98 @@
+body {
+    font-size: 9pt;
+    font-family: 'Baskerville', sans-serif;
+    color: black;
+    background-color: white;
+    line-height: 1.4; /* Adjusted line height */
+    text-align: justify;
+    margin: 0 50px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    hyphens: none;
+    font-weight: 500;
+    word-spacing: -0.05em; /* Adjusted word spacing */
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+h4, h5, h6 {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+blockquote {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 1em;
+    border-left: none;
+    font-style: italic;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: item;
+    padding-left: 1em;
+}
+
+ol > li {
+    display: block;
+}
+
+ol > li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+    position: relative;
+    left: -1em;
+    font-weight: 600;
+}
+
+ol ol {
+    list-style-type: none;
+    counter-reset: item;
+}
+
+ol ol > li:before {
+    content: counters(item, ".") " ";
+    font-weight: 600;
+}
+
+ol ol ol {
+    list-style-type: lower-alpha;
+    counter-reset: item;
+}
+
+ol ol ol > li:before {
+    content: "(" counter(item, lower-alpha) ") ";
+    font-weight: 500; /* Adjusted font weight */
+}
+
+ol ol ol ol {
+    list-style-type: lower-roman;
+    counter-reset: item;
+}
+
+ol ol ol ol > li:before {
+    content: "(" counter(item, lower-roman) ") ";
+    font-weight: 500; /* Adjusted font weight */
+}
